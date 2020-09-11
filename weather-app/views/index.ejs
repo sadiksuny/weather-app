@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href= "public/css/style.css">
+    <title> Weather App </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   
+</head>
+
+<body>
+<div class="container">
+
+        <fieldset>
+
+        <form action="/" method="post">
+            
+            <input class="form-control" name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+            <br>
+            <input class="form-control" name="country" type="text" class="ghost-input" placeholder="Enter a country" required>
+            <br>
+            <button type="submit" class="btn btn-success btn-md"> Get Weather </button>
+
+            <p>Celcius<input type="radio" name="celcius" id="c" value="Celcius"> </p>
+
+            <p>Kelvin <input type="radio" name="kelvin" id="k" value="Kelvin"> </p>
+
+        </form>
+
+        <% if(weather !== null){ %>
+
+            <p><%= weather %></p>
+
+            <% } %>
+            
+            <% if(error !== null){ %>
+  
+                <p><%= error %></p>
+  
+                <% } %>
+
+    
+          
+            </fieldset>
+        </div>
+
+    </body>
+</html>
